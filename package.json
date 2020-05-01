@@ -1,0 +1,15 @@
+{
+  "name": "wawmuzik_talent_finder",
+  "version": "1.0.0",
+  "description": "Talent Finder task in WAWMUZIK test",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Milan Jovic",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "memory-cache": "^0.2.0"
+  }
+}
