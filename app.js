@@ -11,10 +11,6 @@ app.get('/', function (req, res) {
   res.send('Welcome to the Talent Finder API.')
 })
 
-app.get('/candidates', function (req, res) {
-  res.send(cache.get("ae588a6b-4540-5714-bfe2-a5c2a65f547a"))
-})
-
 app.get('/candidates/search', function (req, res) {
   console.log(req.query)
   res.send('candidates/search')
@@ -29,10 +25,11 @@ app.post('/candidates', function (req, res) {
   
   // Save body in memory.
   var body = req.body;
+  const isUpdating = cache.get(body.id) != null;
   cache.put(body.id, body);
 
   // Reply with SUCCESS.
-  if(body.id in cache) {
+  if(isUpdating) {
     res.sendStatus(200);
   } else {
     res.sendStatus(201);
