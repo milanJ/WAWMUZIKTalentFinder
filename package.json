@@ -9,7 +9,7 @@
   "author": "Milan Jovic",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.18.2",
     "memory-cache": "^0.2.0"
   }
 }
